@@ -16,8 +16,7 @@ const addDateSuffix = date => {
   
     return dateStr;
   };
-  
-  // function to format a timestamp, accepts the timestamp and an `options` object as optional parameters
+  // function to format a timestamp
   module.exports = (
     timestamp,
     { monthLength = 'short', dateSuffix = true } = {}
@@ -83,7 +82,7 @@ const addDateSuffix = date => {
   
     const minutes = dateObj.getMinutes();
   
-    // set `am` or `pm`
+    //set `am` or `pm`
     let periodOfDay;
   
     if (dateObj.getHours() >= 12) {

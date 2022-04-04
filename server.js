@@ -16,7 +16,6 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/social-network-
     useCreateIndex: true,
 });
 
-// log mongo queries being executed
 mongoose.set("debug", true);
 
 app.use(require('./routes'));

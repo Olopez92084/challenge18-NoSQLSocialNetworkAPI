@@ -37,7 +37,7 @@ userSchema.virtual('friendCount').get(function () {
   return this.friends.length;
 });
 
-// BONUS
+
 userSchema.pre("findOneAndDelete", { document: false, query: true }, async function() {
     console.log("User pre-delete");
     const doc = await this.model.findOne(this.getFilter());

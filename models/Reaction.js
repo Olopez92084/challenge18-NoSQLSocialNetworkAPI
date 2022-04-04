@@ -1,5 +1,3 @@
-// REACTION'S SUBDOCUMENT SCHEMA IN THOUGHT MODEL
-
 const { Schema, Types } = require("mongoose");
 const dateFormat = require("../utils/dateFormat");
 
@@ -11,12 +9,12 @@ const ReactionSchema = new Schema(
         },
         reactionBody: {
             type: String,
-            required: "Please enter your reaction",
-            maxLength: 280
+            required: "Please enter a reaction",
+            maxLength: 140
         },
         username: {
             type: String,
-            required: "You need a username!",
+            required: "Username required!",
         },
         createdAt: {
             type: Date,
